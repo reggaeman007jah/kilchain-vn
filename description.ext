@@ -1,0 +1,228 @@
+
+// #include "voiceActivatedSystems\VAMP_displays\displays.hpp"
+// #include "autoPatrolSystem\JTAC_Systems\displays\displays.hpp"
+
+//------------------------AIS INJURY----------------------------
+class CfgFunctions {
+	#include "AIS\cfgFunctions.hpp"
+	#include "functions\functions.hpp"
+	#include "functions_Ambient\functions_Ambient.hpp"
+	#include "functions_Build\functions_Build.hpp"
+	#include "functions_Count\functions_Count.hpp"
+	#include "functions_Delete\functions_Delete.hpp"
+	#include "functions_Effects\functions_Effects.hpp"
+	#include "functions_Find\functions_Find.hpp"
+	#include "functions_LocalAttacks\functions_LocalAttacks.hpp"
+	#include "functions_Missions\functions_Missions.hpp"
+	#include "functions_Order\functions_Order.hpp"
+	#include "functions_Spawn\functions_Spawn.hpp"
+	#include "functions_Vehicles\functions_Vehicles.hpp"
+};
+#include "AIS\Effects\BarDlg.hpp"
+//--------------------------------------------------------------
+
+respawn = 3;
+respawndelay = 3;
+respawnButton = 1;
+// disabledAI = true;
+// respawnOnStart = 1;
+
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+
+// briefingName = $STR_MISSION_TITLE;
+overviewText = "OPERATION KILLCHAIN";
+// overviewPicture = "killchain.jpg";
+author = "Reggs";
+// onLoadName = $STR_MISSION_TITLE;
+onLoadName = "OPERATION KILLCHAIN";
+onLoadMission = "Support ARVN jungle patrols... stay alive";
+// loadScreen = "media\images\killchain.jpg";
+loadScreen = "media\images\kc2.jpg";
+
+joinUnassigned = 1;
+
+class Header {
+	gameType =  COOP;	
+	minPlayers = 1;	
+	maxPlayers = 50;
+};
+
+class CfgSounds {
+	sounds[] = {};
+	
+	class info {
+		sound[] = {"\a3\Ui_f\data\Sound\CfgIngameUI\hint",0.891251,1};
+		titles[] = {};
+	};
+	class commandOut {
+		name = "commandOut";
+		sound[] = {"media\voice\commandOut.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class leavingFOB1 {
+		name = "leavingFOB1";
+		sound[] = {"media\voice\leavingFOB1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class leavingFOB2 {
+		name = "leavingFOB2";
+		sound[] = {"media\voice\leavingFOB2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class opforNeutralised1 {
+		name = "opforNeutralised1";
+		sound[] = {"media\voice\opforNeutralised1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class opforNeutralised2 {
+		name = "opforNeutralised2";
+		sound[] = {"media\voice\opforNeutralised2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolMoving1 {
+		name = "patrolMoving1";
+		sound[] = {"media\voice\patrolMoving1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolMoving2 {
+		name = "patrolMoving2";
+		sound[] = {"media\voice\patrolMoving2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolNowLive1 {
+		name = "patrolNowLive1";
+		sound[] = {"media\voice\patrolNowLive1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class patrolNowLive2 {
+		name = "patrolNowLive2";
+		sound[] = {"media\voice\patrolNowLive2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare1 {
+		name = "pointTakenPrepare1";
+		sound[] = {"media\voice\pointTakenPrepare1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare2 {
+		name = "pointTakenPrepare2";
+		sound[] = {"media\voice\pointTakenPrepare2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class pointTakenPrepare3 {
+		name = "pointTakenPrepare3";
+		sound[] = {"media\voice\pointTakenPrepare3.ogg", 3000, 1};
+		titles[] = {};
+	};
+	class RFInbound {
+		name = "RFInbound";
+		sound[] = {"media\voice\RFInbound.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand1 {
+		name = "thisIsCommand1";
+		sound[] = {"media\voice\thisIsCommand1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand2 {
+		name = "thisIsCommand2";
+		sound[] = {"media\voice\thisIsCommand2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class thisIsCommand3 {
+		name = "thisIsCommand3";
+		sound[] = {"media\voice\thisIscommand3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class welcome1 {
+		name = "welcome1";
+		sound[] = {"media\voice\welcome1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class welcome2 {
+		name = "welcome2";
+		sound[] = {"media\voice\welcome2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class enemyAtGrid {
+		name = "enemyAtGrid";
+		sound[] = {"media\voice\enemyAtGrid.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num0 {
+		name = "num0";
+		sound[] = {"media\voice\newnew0.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num1 {
+		name = "num1";
+		sound[] = {"media\voice\newnew1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num2 {
+		name = "num2";
+		sound[] = {"media\voice\newnew2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num3 {
+		name = "num3";
+		sound[] = {"media\voice\newnew3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num4 {
+		name = "num4";
+		sound[] = {"media\voice\newnew4.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num5 {
+		name = "num5";
+		sound[] = {"media\voice\newnew5.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num6 {
+		name = "num6";
+		sound[] = {"media\voice\newnew6.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num7 {
+		name = "num7";
+		sound[] = {"media\voice\newnew7.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num8 {
+		name = "num8";
+		sound[] = {"media\voice\newnew8.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class num9 {
+		name = "num9";
+		sound[] = {"media\voice\newnew9.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class squelch {
+		name = "squelch";
+		sound[] = {"media\voice2\squelch.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class attack {
+		name = "attack";
+		sound[] = {"media\voice2\attack.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class hold {
+		name = "hold";
+		sound[] = {"media\voice2\hold.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class fallback {
+		name = "fallback";
+		sound[] = {"media\voice2\fallback.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class fallbackremain {
+		name = "fallbackremain";
+		sound[] = {"media\voice2\fallbackremain.ogg", db + 0, 1};
+		titles[] = {};
+	};
+};
