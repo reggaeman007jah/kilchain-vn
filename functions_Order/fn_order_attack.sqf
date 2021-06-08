@@ -1,6 +1,7 @@
 // one off move order - all indiRed move in to attack objective 
 
-systemChat "ARVN Units are assaulting the objective";
+// systemChat "ARVN Units are assaulting the objective";
+"ARVN Units are assaulting the objective" remoteExec ["systemChat", -2, true];
 {playSound "attack"} remoteExec ["call",-2];
 // {playSound "commandOut"} remoteExec ["call",0];
 systemChat "played sound";

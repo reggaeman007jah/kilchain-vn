@@ -1,7 +1,8 @@
 // one off order - stop moving 
 
 FALLBACKREMAIN = false; // in case was running 
-systemChat "ARVN Units are holding position";
+// systemChat "ARVN Units are holding position";
+"ARVN Units are holding position" remoteExec ["systemChat", -2, true];
 {playSound "hold"} remoteExec ["call",-2];
 
 _units = allUnits inAreaArray "Redzone";

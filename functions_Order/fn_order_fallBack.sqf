@@ -1,7 +1,7 @@
 // one off order - move to player location 
 
 // systemChat "debug - running fallback.sqf";
-"ARVN Units are falling back to Tinman" remoteExec ["systemChat", 0, true];
+"ARVN Units are falling back to Tinman" remoteExec ["systemChat", -2, true];
 {playSound "fallback"} remoteExec ["call",-2];
 
 FALLBACKREMAIN = false; // in case was running 

@@ -1,6 +1,7 @@
 // loop order, fall back and follow player pos 
 
-systemChat "ARVN Units are falling back to protect TINMAN";
+// systemChat "ARVN Units are falling back to protect TINMAN";
+"ARVN Units are falling back to protect TINMAN" remoteExec ["systemChat", -2, true];
 {playSound "fallbackremain"} remoteExec ["call",-2];
 // _initStartPos = _this select 0; // origin point 
 // _objPos = _this select 1; // obj point 
