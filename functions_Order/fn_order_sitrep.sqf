@@ -15,10 +15,10 @@ _redzoneIndi = 0;
 } forEach _unitsRedzone;
 
 if (_redzoneIndi > 0) then {
-	format ["ARVN Units in AO: %1", _redzoneIndi] remoteExec ["systemChat", 0];
+	format ["ARVN Units in AO: %1", _redzoneIndi] remoteExec ["systemChat", -2];
 	"Bravo 3 out" remoteExec ["systemChat", 0, true];
 } else {
-	"No Response from Bravo 3" remoteExec ["systemChat", 0, true];
+	"No Response from Bravo 3" remoteExec ["systemChat", -2, true];
 };
 
 // use -2 here?

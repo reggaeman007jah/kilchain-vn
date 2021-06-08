@@ -2,7 +2,7 @@
 
 // systemChat "debug - running fallback.sqf";
 "ARVN Units are falling back to Tinman" remoteExec ["systemChat", 0, true];
-{playSound "fallback"} remoteExec ["call",0];
+{playSound "fallback"} remoteExec ["call",-2];
 
 FALLBACKREMAIN = false; // in case was running 
 
