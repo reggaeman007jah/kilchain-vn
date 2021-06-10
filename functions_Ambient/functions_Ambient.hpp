@@ -22,5 +22,8 @@ class RGGa {
 		class ambient_flybys_littlebirds {
 			Description = "This function manages all ambient flybys - Littlebirds";
 		};
+		class ambient_timeManager {
+			Description = "This function manages all time settings, day night etc";
+		};
 	};
 };

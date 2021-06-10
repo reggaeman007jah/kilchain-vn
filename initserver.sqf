@@ -1,4 +1,7 @@
 
+setTimeMultiplier 25;
+remoteExec ["RGGa_fnc_ambient_timeManager", 2];  // execute only on server 
+
 KILLCHAINISLIVE = false;
 
 ["Initialize", [true]] call BIS_fnc_dynamicGroups;
@@ -6,6 +9,7 @@ KILLCHAINISLIVE = false;
 // load images 
 dontForget setObjectTextureGlobal [0, "media\images\reloadImage.jpg"];
 fobPathfinder setObjectTextureGlobal [0, "media\images\pathfinderImage.jpg"];
+shootingRange setObjectTextureGlobal [0, "media\images\caution.jpg"];
 // customFlag setObjectTextureGlobal [0, "media\images\flag1.jpg"];
 customFlag2 setObjectTextureGlobal [0, "media\images\flag1.jpg"];
 whiteBoard setObjectTextureGlobal [0, "media\images\whiteBoard2.jpg"];
@@ -112,6 +116,12 @@ publicVariable "CPD";
 
 // this ensures that only one batch of indifor units are spawned at FOB at any one time 
 CANBOARD = true;
+
+/*
+Day/ night management uses a global bool 
+*/
+RGG_isDay = true;
+publicVariable "RGG_isDay";
 
 /*
 This system needs improvement

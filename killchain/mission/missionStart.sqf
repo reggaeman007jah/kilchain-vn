@@ -33,6 +33,9 @@ if (RGG_IndiPlayerSystem) then {
 	// indiFor Player-Led System 
 	// init Point 1 Obj  
 	[_objPos] execVM "killChain\mission\patrolCycleHoldCheck.sqf";
+	// execVM "killchain\systems\ambientSystems\flares.sqf"; // temp auto start for perma-flares
+		
+
 } else {
 	// standard killchain 
 	// init Point 1 Obj  

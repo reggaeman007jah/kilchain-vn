@@ -516,7 +516,7 @@ while {RFCHECK2} do {
 
 	// flybys 
 	[_objPos] execVM "killchain\systems\ambientSystems\randomFlybys.sqf";
-	execVM "killchain\systems\ambientSystems\flares.sqf";
+	// execVM "killchain\systems\ambientSystems\flares.sqf";
 		
 	// total numbers 
 	_indi = independent countSide allUnits;

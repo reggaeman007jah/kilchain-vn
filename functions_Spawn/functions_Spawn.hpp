@@ -17,6 +17,10 @@ class RGGs {
 			Description = "This function will create minimum base crew of 8 units";
 		};
 
+		class spawn_birdDog {
+			Description = "This function will spawn light aircraft for scouting and flares";
+		};
+
 		class spawn_bluforSentries {
 			Description = "This function will create wall and tower AI sentries";
 		};

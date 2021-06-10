@@ -9,6 +9,9 @@ systemChat format ["debug - Patrol Points Taken: %1", patrolPointsTaken];
 
 RGG_sideMissionCompleted = true;
 
+
+
+
 // burning vics
 [] spawn RGGa_fnc_ambient_burningVics;
 // [] spawn RGGc_fnc_count_depleteSupplies; 
@@ -295,6 +298,18 @@ while {RFCHECK} do {
 	// execVM "killchain\systems\ambientSystems\flares.sqf";
 	[_objPos] execVM "killchain\systems\ambientSystems\mortars.sqf";
 
+	/*
+	BIRDDOG TEMP 
+	*/
+
+	_origin = getPos _player;
+	_origin set [2, 400]
+	[_group, _origin, 300, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+
+	/*
+	BIRDDOG TEMP 
+	*/
+
 	// total numbers 
 	_indi = independent countSide allUnits;
 	_east = east countSide allUnits;
@@ -514,9 +529,22 @@ RFCHECK2 = true;
 
 while {RFCHECK2} do {
 
+	/*
+	BIRDDOG TEMP 
+	*/
+
+	_origin = getPos _player;
+	_anchorPos = _origin getPos [400, 0];
+	[_group, _origin, 300, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+
+	/*
+	BIRDDOG TEMP 
+	*/
+
+
 	// flybys and flares (for their attack)
 	[_objPos] execVM "killchain\systems\ambientSystems\randomFlybys.sqf";
-	execVM "killchain\systems\ambientSystems\flares.sqf";
+	// execVM "killchain\systems\ambientSystems\flares.sqf";
 		
 	// total numbers 
 	_indi = independent countSide allUnits;

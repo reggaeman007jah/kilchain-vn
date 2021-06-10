@@ -13,6 +13,10 @@ class RGGe {
 			Description = "This function will sink blocks or obkects into the ground";
 		};
 
+		class effects_checkNight {
+			Description = "This function will check for nighttime, and set bool if true - informing flare ops";
+		};
+
 		class effects_markers {
 			Description = "This function will make LZ markers flash";
 		};
