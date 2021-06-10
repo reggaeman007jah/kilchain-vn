@@ -302,9 +302,9 @@ while {RFCHECK} do {
 	BIRDDOG TEMP 
 	*/
 
-	_origin = getPos _player;
-	_origin set [2, 400]
-	[_group, _origin, 300, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+	// _origin = getPos _player;
+	// _origin set [2, 400];
+	// [_group, _origin, 300, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
 
 	/*
 	BIRDDOG TEMP 

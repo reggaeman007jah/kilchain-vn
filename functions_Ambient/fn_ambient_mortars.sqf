@@ -13,10 +13,11 @@ _boom = [
 
 // direction 
 _ranDir = random 359;
-_splash = _target getPos [300, _ranDir];
+_splash = _target getPos [400, _ranDir];
 _hits = selectRandom [10, 12, 14, 16, 18, 20];
 _gap = selectRandom [60, 90, 120];
 _ord = selectRandom _boom;
+systemChat format ["Boom: %1", _ord];
 
 sleep _gap;
 
@@ -31,7 +32,7 @@ for "_i" from 1 to _hits do {
 
 sleep _gap;
 
-_splash = _target getPos [200, _ranDir];
+_splash = _target getPos [250, _ranDir];
 
 for "_i" from 1 to _hits do {
 	_space = selectRandom [2,3,4,5];
@@ -44,7 +45,7 @@ for "_i" from 1 to _hits do {
 
 sleep _gap;
 
-_splash = _target getPos [100, _ranDir];
+_splash = _target getPos [80, _ranDir];
 
 for "_i" from 1 to _hits do {
 	_space = selectRandom [2,3,4,5];

@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1038;
+		nextID=1044;
 	};
 	class MarkerIDProvider
 	{
-		nextID=30;
+		nextID=31;
 	};
 	class Camera
 	{
-		pos[]={17105.146,17.472944,7165.2969};
-		dir[]={0.99986744,-0.0080123935,-0.014182104};
-		up[]={0.0080115898,0.99996799,-0.00011363626};
-		aside[]={-0.014182561,0,-0.99989963};
+		pos[]={17287.105,17.472944,7141.9619};
+		dir[]={0.92325002,-0.3604497,-0.13298658};
+		up[]={0.35676759,0.93277866,-0.051389441};
+		aside[]={-0.14257035,0,-0.98978472};
 	};
 };
 binarizationWanted=0;
@@ -290,8 +290,8 @@ class Mission
 		year=1972;
 		month=6;
 		day=15;
-		hour=19;
-		minute=-15;
+		hour=17;
+		minute=-27;
 		startFogBase=-16.448364;
 		forecastFogBase=74.770874;
 		startFogDecay=0.015592507;
@@ -299,7 +299,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=163;
+		items=168;
 		class Item0
 		{
 			dataType="Logic";
@@ -6146,6 +6146,107 @@ class Mission
 			};
 			id=1037;
 			type="vn_c_bicycle_01";
+		};
+		class Item163
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17297.539,14.979177,7142.436};
+				angles[]={-0,1.9314003,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				ammo=0.94698572;
+				init="call{0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;}";
+				name="ammo1Test_2";
+			};
+			id=1038;
+			type="vn_o_ammobox_full_08";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""vn_m_shovel_01"",""vn_m_axe_01"",""vn_m_bayo_m4956"",""vn_m_vc_knife_01"",""vn_m_fighting_knife_01"",""vn_m_machete_01"",""vn_fkb1"",""vn_fkb1_red"",""vn_m1895"",""vn_m1895_sd"",""vn_tt33"",""vn_m712"",""vn_pm"",""vn_pm_sd"",""vn_fkb1_pm"",""vn_fkb1_pm_sd"",""vn_izh54"",""vn_izh54_shorty"",""vn_izh54_p"",""vn_mp40"",""vn_pps43"",""vn_pps52"",""vn_k50m"",""vn_ppsh41"",""vn_mat49_vc"",""vn_type56"",""vn_type56_bayo"",""vn_m4956"",""vn_m4956_bayo"",""vn_m4956_sniper"",""vn_m4956_gl"",""vn_m38"",""vn_m38_bayo"",""vn_m1891"",""vn_m1891_bayo"",""vn_m9130"",""vn_m9130_bayo"",""vn_m9130_sniper"",""vn_sks"",""vn_sks_bayo"",""vn_sks_gl"",""vn_rpd"",""vn_dp28"",""vn_pk"",""vn_rpg2"",""vn_sa7"",""vn_sa7b"",""vn_rpg7""],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]],[[""vn_molotov_grenade_mag"",""vn_rkg3_grenade_mag"",""vn_t67_grenade_mag"",""vn_f1_grenade_mag"",""vn_rg42_grenade_mag"",""vn_rgd5_grenade_mag"",""vn_rgd33_grenade_mag"",""vn_chicom_grenade_mag"",""vn_rdg2_mag"",""vn_mine_satchel_remote_02_mag"",""vn_mine_tripwire_f1_02_mag"",""vn_mine_tripwire_f1_04_mag"",""vn_mine_tripwire_arty_mag"",""vn_mine_tm57_mag"",""vn_mine_punji_01_mag"",""vn_mine_punji_02_mag"",""vn_mine_punji_03_mag"",""vn_22mm_m60_frag_mag"",""vn_22mm_m60_heat_mag"",""vn_22mm_he_mag"",""vn_sa7_mag"",""vn_sa7b_mag"",""vn_rpg2_mag"",""vn_rpg7_mag"",""vn_m1895_mag"",""vn_pm_mag"",""vn_tt33_mag"",""vn_m712_mag"",""vn_izh54_mag"",""vn_izh54_so_mag"",""vn_mat49_vc_mag"",""vn_mp40_mag"",""vn_ppsh41_35_mag"",""vn_ppsh41_71_mag"",""vn_pps_mag"",""vn_type56_mag"",""vn_sks_mag"",""vn_m4956_10_mag"",""vn_m38_mag"",""vn_rpd_100_mag"",""vn_dp28_mag"",""vn_pk_100_mag""],[20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,10,10,10,10,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50]],[[""vn_m19_binocs_grey"",""vn_o_item_firstaidkit"",""vn_b_item_watch"",""vn_b_item_compass"",""vn_o_item_radio_m252"",""vn_o_item_map"",""vn_b_item_trapkit"",""vn_b_item_medikit_01"",""vn_b_item_toolkit"",""vn_b_type56"",""vn_b_camo_m9130"",""vn_b_m38"",""vn_b_sks"",""vn_b_m4956"",""vn_s_pm"",""vn_s_m1895"",""vn_o_3x_m9130"",""vn_o_4x_m4956""],[10,50,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item164
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17302.572,15.39731,7139.2808};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1040;
+			type="Land_vn_bagfence_01_long_green_f";
+		};
+		class Item165
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17299.555,15.39731,7139.2305};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1041;
+			type="Land_vn_bagfence_01_long_green_f";
+		};
+		class Item166
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17296.463,15.39731,7139.2769};
+				angles[]={0,3.1607411,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1042;
+			type="Land_vn_bagfence_01_long_green_f";
+		};
+		class Item167
+		{
+			dataType="Marker";
+			position[]={17220.488,13.366,7090.27};
+			name="pathFinderBase";
+			markerType="RECTANGLE";
+			type="ellipse";
+			alpha=0.41995931;
+			a=400;
+			b=200;
+			id=1043;
+			atlOffset=-1.6139994;
 		};
 	};
 	class Connections
