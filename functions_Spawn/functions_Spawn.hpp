@@ -36,5 +36,13 @@ class RGGs {
 		class spawn_fuelTruck {
 			Description = "This function will create fuel truck on a road nearby and cycle if truck is destroyed";
 		};
+
+		class spawn_opforNightOps {
+			Description = "This function will manage whether night attacks happen";
+		};
+
+		class spawn_vc {
+			Description = "This function will spawn VC and sent into Tinman pos";
+		};
 	};
 };

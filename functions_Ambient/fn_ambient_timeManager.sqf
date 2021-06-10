@@ -62,6 +62,24 @@ publicVariable "RGG_isDay";
 // spawn RGGs_fnc_spawn_birdDog;
 remoteExec ["RGGs_fnc_spawn_birdDog", 2];
 execVM "killchain\systems\ambientSystems\flares.sqf";
+// here we create the possibility of a VC night attack - this will always run, but won't always yeild enemies 
+
+// get indi player
+_dataStore = [];
+{
+	if ((side _x) == INDEPENDENT) then { _dataStore pushback _x }
+} forEach allPlayers;
+_cnt = count _dataStore;
+
+if (_cnt > 0) then {
+	// commander is considered alive
+	systemChat "Tinman is alive";
+	_commander = _dataStore select 0;
+	_commPos = getPos _commander;
+	_spawnPos = [_commPos, 400, 400, 10, 0, 1, 0, 400] call RGGf_fnc_find_locationNoPlayers;
+	// [_spawnPos, _commPos] remoteExec ["RGGs_fnc_spawn_opforNightOps", 2];
+	[_spawnPos, _commPos] spawn RGGs_fnc_spawn_opforNightOps;
+};
 
 // trigger time for day 
 waitUntil { (date select 3) == 5 };

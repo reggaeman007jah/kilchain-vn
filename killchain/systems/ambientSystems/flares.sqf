@@ -38,7 +38,7 @@ _commander = _dataStore select 0;
 while { !RGG_isDay } do {
 
 	systemChat "flares ...";
-	_flares = [3,4,5]; 
+	_flares = [5,6,7]; 
 	_isFlares = selectRandom _flares;
 	_ranSleep = [2,5,10,20];
 	_col = ["F_40mm_white","F_40mm_red"];
@@ -49,13 +49,14 @@ while { !RGG_isDay } do {
 		// systemChat "FLARRRES!";
 		_commPos = getPos _commander;
 		_dir = random 359;
-		_dist = random 30;
+		_dist = random 80;
 		_type = selectRandom _col;
 		_hgt = selectRandom _height;
 		_spawnPos = _commPos getPos [_dist,_dir];
 		_spawnPos set [2,_hgt];
 		_obj = _type createVehicle _spawnPos;
 		_obj setVelocity [0,0,-4];
+		sleep 2,
 	};
 
 	sleep 20; 

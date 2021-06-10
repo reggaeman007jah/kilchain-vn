@@ -25,5 +25,8 @@ class RGGa {
 		class ambient_timeManager {
 			Description = "This function manages all time settings, day night etc";
 		};
+		class ambient_mortars {
+			Description = "This function creates ambi mortars";
+		};
 	};
 };
