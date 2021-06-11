@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17132.766,20.371738,7165.9907};
-		dir[]={-0.097826146,-0.069076434,-0.9928056};
-		up[]={-0.0067736814,0.99761224,-0.068743937};
-		aside[]={-0.99518341,-2.2122549e-008,0.098060176};
+		pos[]={17117.699,19.283699,7120.8481};
+		dir[]={0.28135923,-0.19635887,0.93931931};
+		up[]={0.056345027,0.98052835,0.18810715};
+		aside[]={0.95796645,6.4726919e-008,-0.28694433};
 	};
 };
 binarizationWanted=0;
@@ -45,17 +45,13 @@ addons[]=
 	"tfar_handhelds",
 	"A3_Rocks_F",
 	"A3_Supplies_F_Enoch_Ammoboxes",
-	"A3_Structures_F_Enoch_Military_Training",
-	"A3_Structures_F_EPA_Civ_Constructions",
-	"ace_interaction",
-	"ace_cargo",
-	"ace_dragging"
+	"A3_Structures_F_Enoch_Military_Training"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=18;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -181,34 +177,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
-		{
-			className="A3_Structures_F_EPA";
-			name="Arma 3 Survive Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item19
-		{
-			className="ace_interaction";
-			name="ACE3 - Interaction";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item20
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item21
-		{
-			className="ace_dragging";
-			name="ACE3 - Dragging";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
 	};
 };
 dlcs[]=
@@ -331,7 +299,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=165;
+		items=162;
 		class Item0
 		{
 			dataType="Logic";
@@ -4366,6 +4334,7 @@ class Mission
 			};
 			id=780;
 			type="vn_o_ammobox_full_08";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6060,7 +6029,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17114.736,14.98,7190.002};
-				angles[]={-0,0.39852244,0};
+				angles[]={0,0.39852244,0};
 			};
 			side="Empty";
 			flags=4;
@@ -6069,57 +6038,6 @@ class Mission
 			};
 			id=1068;
 			type="vn_prop_drink_10_gh";
-		};
-		class Item162
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={17088.791,16.077517,7163.9556};
-				angles[]={0,5.3167744,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1069;
-			type="Land_PortableLight_single_F";
-			atlOffset=0.013040543;
-		};
-		class Item163
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={17095.279,16.077517,7160.1289};
-				angles[]={0,2.2451034,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1070;
-			type="Land_PortableLight_single_F";
-			atlOffset=0.011248589;
-		};
-		class Item164
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={17104.656,16.063812,7216.7476};
-				angles[]={0,4.6005187,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=1071;
-			type="Land_PortableLight_double_F";
-			atlOffset=-9.5367432e-007;
 		};
 	};
 	class Connections
