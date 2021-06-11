@@ -202,6 +202,31 @@ sleep 1;
 [[20015.7,6579.05,0]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
 sleep 1;
 
+// more at dirt pile 
+[[11909.9,9186.87,-0.000335693]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11913.7,9191.42,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11917.3,9197.78,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11921.4,9203.95,-0.000274658]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11925.6,9210.26,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11929.5,9215.19,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11932.7,9220.05,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11937.9,9227.21,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11944,9239.64,-0.000305176]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+[[11949.9,9247.55,-0.000274658]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+sleep 1;
+
+// pathfinder 
+[[17093,7137.33,0]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+
 
 // [17113.8,7161.41,0]
 
