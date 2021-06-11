@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1072;
+		nextID=1075;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17117.699,19.283699,7120.8481};
-		dir[]={0.28135923,-0.19635887,0.93931931};
-		up[]={0.056345027,0.98052835,0.18810715};
-		aside[]={0.95796645,6.4726919e-008,-0.28694433};
+		pos[]={17112.018,18.534864,7182.1377};
+		dir[]={-0.96901971,-0.22064999,-0.11097107};
+		up[]={-0.21921721,0.975353,-0.025104513};
+		aside[]={-0.11377528,0,0.99350661};
 	};
 };
 binarizationWanted=0;
@@ -299,7 +299,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=162;
+		items=163;
 		class Item0
 		{
 			dataType="Logic";
@@ -6038,6 +6038,23 @@ class Mission
 			};
 			id=1068;
 			type="vn_prop_drink_10_gh";
+		};
+		class Item162
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17095.811,16.723186,7182.8818};
+				angles[]={0,4.6459794,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="vnMap";
+			};
+			id=1074;
+			type="Land_Billboard_F";
 		};
 	};
 	class Connections

@@ -15,6 +15,7 @@ customFlag2 setObjectTextureGlobal [0, "media\images\flag1.jpg"];
 whiteBoard setObjectTextureGlobal [0, "media\images\whiteBoard2.jpg"];
 // customFlag setObjectTexture [0,"media\images\flag1.jpg"]; // BROKEN
 customFlag2 setObjectTexture [0,"media\images\flag1.jpg"];
+vnMap setObjectTexture [0,"media\images\vnMap2.jpg"];
 
 // blufor marker system 
 // execVM "killchain\systems\markerSystems\bluforMarkers.sqf"; // will run even if Killchain does not run 
