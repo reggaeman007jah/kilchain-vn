@@ -1,5 +1,7 @@
 /*
 This function manages all ambient flybys - Jets
+
+use this - RGG_isDay to stop night flights 
 */
 
 // ** imports 

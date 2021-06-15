@@ -7,6 +7,9 @@ player addEventHandler ['Respawn',{ player enableStamina FALSE }];
 
 sleep 5;
 
+// untested !!
+tinmanModule addCuratorEditableObjects [[player], true];
+
 // voiceMarkerSystem 
 // vamp = false;
 // execVM "killchain\systems\voiceSystems\voiceMarkerSystem\1_vmsInit.sqf";

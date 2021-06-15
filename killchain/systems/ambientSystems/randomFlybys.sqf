@@ -38,7 +38,7 @@ Improvement ideas:
 
 _objPos = _this select 0; // starting point for any new mission
 
-if (flybyIsActive) then {
+if ((flybyIsActive) && (RGG_isDay)) then {
 	flybyIsActive = false;
 	_height = selectRandom [50, 100, 200, 300, 500, 800]; // random height 
 	_sleep = selectRandom [120, 180, 240, 300]; // determines how long between call of script  
@@ -57,6 +57,7 @@ if (flybyIsActive) then {
 		sleep _slp; // spacer sleep between each iteration to prevent spawn overlaps 	
 	};
 	
+	sleep 200; // always this 
 	sleep _sleep; // random sleep between spawn batches // test if moving this line solves the pos problem 
 	flybyIsActive = true;
 };
