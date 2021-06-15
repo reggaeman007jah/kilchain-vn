@@ -55,7 +55,11 @@
 
 // trigger time for night
 waitUntil { (date select 3) == 19 };
-systemChat "it is 7pm, time for fast night speed";
+systemChat "it is 7pm, time for dusk speed";
+setTimeMultiplier 0.5;
+
+waitUntil { (date select 4) == 25 };
+systemChat "it is 7:30pm, time for fast night speed";
 setTimeMultiplier 55;
 RGG_isDay = false;
 publicVariable "RGG_isDay";
@@ -83,7 +87,11 @@ if (_cnt > 0) then {
 
 // trigger time for day 
 waitUntil { (date select 3) == 5 };
-systemChat "it is 5am, time for slow day speed";
+systemChat "it is 5am, time for slow dawn-break";
+setTimeMultiplier 10;
+
+waitUntil { (date select 4) == 30 };
+systemChat "it is 5:30am, time for slow day speed";
 setTimeMultiplier 25;
 RGG_isDay = true;
 publicVariable "RGG_isDay";
