@@ -15,7 +15,13 @@ For now, just pick a random dir and dist from _anchor .. good enough for now
 spawn random groups of 3 or 4, on outer reaches of battlezone, and send them in 
 */
 
-if (patrolPointsTaken > 0 ) then {
+/*
+15 June 2021 
+To-do: ensure that these only get spawned if the overall opfor cap has not been reached - set CAP !!
+*/
+
+// testing change - made this happen from point 0 
+if (patrolPointsTaken >= 0 ) then {
 	// this will avoid base spawwning on mission start 
 	// systemChat "debug - delete when tested - roamers activated";
 	_anchor = _this select 0;
@@ -112,6 +118,8 @@ if (patrolPointsTaken > 0 ) then {
 		_opforTeam pushBack _unit1;
 	};
 
+	tinmanModule addCuratorEditableObjects [_opforTeam, true];
+
 	// idea - after spawn, have them roam around the objective area .. 
 	_roam = true;
 	while {_roam} do {
@@ -123,7 +131,7 @@ if (patrolPointsTaken > 0 ) then {
 			_roam = false;
 		};
 
-		sleep 120
+		sleep 300
 	};
 
 

@@ -45,6 +45,7 @@ _unit = _grp createUnit [_manned, _pos, [], 1, "none"];
 _static = _class createVehicle _pos;
 _unit moveInGunner _static;
 _unit setBehaviour "COMBAT";
+tinmanModule addCuratorEditableObjects [[_static, _unit], true];
 	
 
 

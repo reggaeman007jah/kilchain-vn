@@ -214,9 +214,10 @@ while {SPECOPSATTACKS} do {
 			_pos = _spawnPos getPos [_dist, _dir];
 			_unit = _opGroup createUnit [_x, _pos, [], 0.1, "none"]; 
 			_unit setCombatMode "GREEN";
+			tinmanModule addCuratorEditableObjects [[_unit], true];
 			sleep 0.2;
 		} forEach _specOps;
-
+		
 		// _cnt = count _opGroup;
 
 		_hunt = true;

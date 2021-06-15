@@ -1,25 +1,33 @@
-// this is for indi-led player missions 
+/*
+This system runs the indifor-player-led gametype 
+*/
 
+// cycle-bools declared 
 RFCHECK = false;
 RFCHECK2 = false;
 
+// key positions declared 
 _initStartPos = _this select 0; // starting point for any new mission
 _objPos = _this select 1; // objective point for any new mission 
 systemChat format ["debug - Patrol Points Taken: %1", patrolPointsTaken];
 
+// this was used to track side-missions and can be linked to prgression states, but as we don't have any side missions right now this is set to TRUE by default - we may bring these back in future, for now just ignore 
 RGG_sideMissionCompleted = true;
-
-
-
 
 // burning vics
 [] spawn RGGa_fnc_ambient_burningVics;
 // [] spawn RGGc_fnc_count_depleteSupplies; 
-systemChat "debug - have just spawned ambiVics";
+// systemChat "debug - have just spawned ambiVics";
+/*
+15 June 2021 
+To-Do: decide how to better create ambient smokes and fires 
+*/
 
-// roamers 
+// roamers - randoms created in the AO and sent around the area 
 [_objPos, _initStartPos] execVM "killchain\systems\randomThreatSystems\randomThreats.sqf";
 
+
+// ----- MARKERS -----
 // OBJ - patrol stage objective 
 deleteMarker "Redzone"; 
 _objective1 = createMarker ["Redzone", _objPos];
@@ -92,7 +100,6 @@ _tempMarker setMarkerAlpha 0.1;
 sleep 1;
 _tempMarker setMarkerAlpha 0.7;
 
-
 // generate path marker/lines between marker points 
 // generate random number and make into string 
 _float = diag_tickTime;
@@ -116,8 +123,10 @@ _lineTest setMarkerSize [2, _dist2];
 // to enable a colour change when the chain breaks, these lines need to be pushed back into an array 
 // systemChat "debug - markers done"; 
 
+
+// ----- CAMPSITE STUFF -----
 // new camp location and items 
-_randomCampLocation = _objPos findEmptyPosition [1,100,"B_Quadbike_01_F"];
+_randomCampLocation = _objPos findEmptyPosition [1,100,"B_Quadbike_01_F"]; // find a space 
 _RGG_CampItems = [];
 _random5 = random 5;
 _random3 = random 3;
@@ -207,6 +216,8 @@ for "_i" from 1 to _diffLevel do {
 		_unit = _grp createUnit [_rndtype, _pos, [], 1, "none"]; 
 		_unit setBehaviour "COMBAT";
 		_unit doMove _initStartPos; 
+
+		tinmanModule addCuratorEditableObjects [[_unit], true];
 		// spawnedOpforUnit = spawnedOpforUnit + 1;
 		sleep 2;						
 	};
@@ -243,6 +254,9 @@ for "_i" from 1 to _rndOp1 do {
 	_endPoint = _objPos getPos [_randomDist, _randomDir];
 	_unit setBehaviour "COMBAT";
 	_unit doMove _endPoint;
+	
+	tinmanModule addCuratorEditableObjects [[_unit], true];
+	
 	// spawnedOpforUnit = spawnedOpforUnit +1;
  	sleep 1;									
 };
@@ -308,6 +322,11 @@ while {RFCHECK} do {
 
 	/*
 	BIRDDOG TEMP 
+	*/
+
+	/*
+	15 June 2021 
+	To-do: set up this count as a function!!!
 	*/
 
 	// total numbers 
@@ -396,8 +415,11 @@ sleep 3;
 
 //---------------------------------------------------------------------------------------------------------
 // Roamers 
-[_objPos, _initStartPos] execVM "killchain\systems\randomThreatSystems\randomThreats.sqf";
-systemChat "Roamers created";
+// [_objPos, _initStartPos] execVM "killchain\systems\randomThreatSystems\randomThreats.sqf";
+// systemChat "Roamers created";
+/*
+15 June 2021 - I have removed this ^^ as there should only really be one patrol per cycle - to be tested! 
+*/
 // note - is the above correct? should they be the other way round??
 // TO DO - MAKE ROAMERSaLT ALWAYS GO TO PLAYER INDI 
 // or, random point in redzone 
@@ -478,7 +500,7 @@ for "_i" from 1 to 2 do {
 			_unit1 = _opforGroup createUnit [_unit, _anchor1a, [], 0.1, "none"];
 			_opforTeam pushBack _unit1;
 		};
-
+		tinmanModule addCuratorEditableObjects [_opforTeam, true];
 		sleep 0.7;
 
 		// move orders 
@@ -506,7 +528,7 @@ if (patrolPointsTaken > 2) then {
 				_unit1 = _opforGroup createUnit [_unit, _qrfAnchor, [], 0.1, "none"];
 				_opforTeam pushBack _unit1;
 			};
-
+			tinmanModule addCuratorEditableObjects [_opforTeam, true];
 			sleep 0.7;
 
 			// move orders 
