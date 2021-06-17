@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1075;
+		nextID=1079;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17109.928,22.338444,7148.8169};
-		dir[]={0.26776373,-0.41239297,0.87076682};
-		up[]={0.12121093,0.91100609,0.39417753};
-		aside[]={0.95582992,-1.4901161e-008,-0.29392093};
+		pos[]={17091.561,29.992029,7129.0874};
+		dir[]={-0.9174884,-0.39263982,-0.063632146};
+		up[]={-0.3916989,0.91969228,-0.027166164};
+		aside[]={-0.069188513,-1.8626451e-009,0.99760354};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,15 @@ addons[]=
 	"tfar_handhelds",
 	"A3_Rocks_F",
 	"A3_Supplies_F_Enoch_Ammoboxes",
-	"A3_Structures_F_Enoch_Military_Training"
+	"A3_Structures_F_Enoch_Military_Training",
+	"A3_Weapons_F_Ammoboxes",
+	"A3_Weapons_F"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=18;
+		items=19;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -177,6 +179,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item18
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -299,7 +308,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=163;
+		items=165;
 		class Item0
 		{
 			dataType="Logic";
@@ -6045,17 +6054,49 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17095.811,16.723186,7182.8818};
-				angles[]={0,4.6459794,0};
+				position[]={17095.68,16.935854,7142.0659};
+				angles[]={0,4.7184038,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				name="vnMap";
+				name="vnMapX";
 			};
-			id=1074;
-			type="Land_Billboard_F";
+			id=1075;
+			type="Land_Billboard_03_blank_F";
+			atlOffset=-9.5367432e-007;
+		};
+		class Item163
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17071.543,15.168724,7131.854};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="soundSource";
+			};
+			id=1077;
+			type="Box_East_Wps_F";
+		};
+		class Item164
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17073.57,15.641232,7127.5806};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1078;
+			type="Item_ItemCompass";
 		};
 	};
 	class Connections

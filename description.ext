@@ -12,6 +12,7 @@ class CfgFunctions {
 	#include "functions_Delete\functions_Delete.hpp"
 	#include "functions_Effects\functions_Effects.hpp"
 	#include "functions_Find\functions_Find.hpp"
+	#include "functions_Get\functions_Get.hpp"
 	#include "functions_LocalAttacks\functions_LocalAttacks.hpp"
 	#include "functions_Missions\functions_Missions.hpp"
 	#include "functions_Order\functions_Order.hpp"
@@ -223,6 +224,11 @@ class CfgSounds {
 	class fallbackremain {
 		name = "fallbackremain";
 		sound[] = {"media\voice2\fallbackremain.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class jungle1 {
+		name = "jungle1";
+		sound[] = {"media\jungle\jungle1.ogg", db + 0, 1};
 		titles[] = {};
 	};
 };

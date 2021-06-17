@@ -7,7 +7,8 @@ KILLCHAINISLIVE = false;
 ["Initialize", [true]] call BIS_fnc_dynamicGroups;
 
 // load images 
-dontForget setObjectTextureGlobal [0, "media\images\reloadImage.jpg"];
+// dontForget setObjectTextureGlobal [0, "media\images\reloadImage.jpg"];
+dontForget setObjectTextureGlobal [0, "media\images\vnMap3.jpg"];
 fobPathfinder setObjectTextureGlobal [0, "media\images\pathfinderImage.jpg"];
 shootingRange setObjectTextureGlobal [0, "media\images\caution.jpg"];
 // customFlag setObjectTextureGlobal [0, "media\images\flag1.jpg"];
@@ -15,7 +16,8 @@ customFlag2 setObjectTextureGlobal [0, "media\images\flag1.jpg"];
 whiteBoard setObjectTextureGlobal [0, "media\images\whiteBoard2.jpg"];
 // customFlag setObjectTexture [0,"media\images\flag1.jpg"]; // BROKEN
 customFlag2 setObjectTexture [0,"media\images\flag1.jpg"];
-vnMap setObjectTexture [0,"media\images\vnMap3.jpg"];
+// vnMapX setObjectTexture [0,"media\images\vnMap3.jpg"];
+// vnMapX setObjectTexture [0,"media\images\reloadImage2.jpg"];
 
 // blufor marker system 
 // execVM "killchain\systems\markerSystems\bluforMarkers.sqf"; // will run even if Killchain does not run 
@@ -227,6 +229,9 @@ sleep 1;
 
 // pathfinder 
 [[17093,7137.33,0]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
+
+// testing sound sources
+[soundSource] spawn RGGa_fnc_ambient_jungleSounds;
 
 
 // [17113.8,7161.41,0]
