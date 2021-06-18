@@ -8,6 +8,8 @@ class RGGf {
 		class find_locationNoPlayers {
 			Description = "This function will find a location that has no players nearby";
 		};
-
+		class find_nearbyUnits {
+			Description = "This function will search for nearby units of a given faction, and return true or false ";
+		};
 	};
 };

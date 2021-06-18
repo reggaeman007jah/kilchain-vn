@@ -231,4 +231,109 @@ class CfgSounds {
 		sound[] = {"media\jungle\jungle1.ogg", db + 0, 1};
 		titles[] = {};
 	};
+	class night1 {
+		name = "night1";
+		sound[] = {"media\jungleNight\night1.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night2 {
+		name = "night2";
+		sound[] = {"media\jungleNight\night2.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night3 {
+		name = "night3";
+		sound[] = {"media\jungleNight\night3.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night4 {
+		name = "night4";
+		sound[] = {"media\jungleNight\night4.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night5 {
+		name = "night5";
+		sound[] = {"media\jungleNight\night5.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night6 {
+		name = "night6";
+		sound[] = {"media\jungleNight\night6.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night7 {
+		name = "night7";
+		sound[] = {"media\jungleNight\night7.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night8 {
+		name = "night8";
+		sound[] = {"media\jungleNight\night8.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night9 {
+		name = "night9";
+		sound[] = {"media\jungleNight\night9.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night10 {
+		name = "night10";
+		sound[] = {"media\jungleNight\night10.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night11 {
+		name = "night11";
+		sound[] = {"media\jungleNight\night11.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night12 {
+		name = "night12";
+		sound[] = {"media\jungleNight\night12.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night13 {
+		name = "night13";
+		sound[] = {"media\jungleNight\night13.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night14 {
+		name = "night14";
+		sound[] = {"media\jungleNight\night14.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night15 {
+		name = "night15";
+		sound[] = {"media\jungleNight\night15.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night16 {
+		name = "night16";
+		sound[] = {"media\jungleNight\night16.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night17 {
+		name = "night17";
+		sound[] = {"media\jungleNight\night17.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night18 {
+		name = "night18";
+		sound[] = {"media\jungleNight\night18.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night19 {
+		name = "night19";
+		sound[] = {"media\jungleNight\night19.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night20 {
+		name = "night20";
+		sound[] = {"media\jungleNight\night20.ogg", db + 0, 1};
+		titles[] = {};
+	};
+	class night21 {
+		name = "night21";
+		sound[] = {"media\jungleNight\night21.ogg", db + 0, 1};
+		titles[] = {};
+	};
 };

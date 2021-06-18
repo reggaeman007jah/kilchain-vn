@@ -10,7 +10,11 @@ _playersOnGround = [];
 	if (_alt < 2) then {
 		_playersOnGround pushBack _x;
 	};
-	sleep 0.2;
+	// sleep 0.2;
 } forEach allPlayers;
+
+// debug 
+systemChat format ["DEBUG - returning all players on ground on ground: %1", _playersOnGround];
+
 
 _playersOnGround
