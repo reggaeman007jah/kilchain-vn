@@ -17,34 +17,27 @@ while {TRUE} do {
 	// get players on ground  
 	_playersOnGround = [] call RGGg_fnc_get_allPlayersOnGround;
 
+	// select random sound 
 	_sound = selectRandom ["night1", "night2", "night3", "night4", "night5", "night6", "night7", "night8", "night9", "night10", "night11", "night12", "night13", "night14", "night15", "night16", "night17", "night18", "night19", "night20", "night21"];
 
-	sleep 5;
-
-	// debug 
-	systemChat format ["DEBUG - returning FNC: %1", _playersOnGround];
-	_test = _playersOnGround select 0;
-	systemChat format ["DEBUG - returning select 0: %1", _test];
-	sleep 5;
-
 	// select random player on ground 
-	// _randPlayer = selectRandom _playersOnGround; // does not work 
-	_randPlayer = _playersOnGround select 0; // also does not work 
+	// _randPlayer = selectRandom _playersOnGround; 
+	_randPlayer = _playersOnGround select 0; // test only  
 
 	// debug 
 	systemChat format ["DEBUG - returning random on ground: %1", _randPlayer];
 
 	// get pos of selected player 
 	_randPlayerPos = getPos _randPlayer;
-	_inArea = _randPlayerPos inArea "redzone";
+	_inArea = _randPlayerPos inArea "redzone"; // i.e. only works if player is in the AO 
 
 	// determine whether enemies are near, and only continue if false   
-	_enemyNear = [_randPlayerPos, 300, "EAST"] call RGGf_fnc_find_nearbyUnits; // here we check for 300m radius 
+	_enemyNear = [_randPlayerPos, 300, "EAST"] call RGGf_fnc_find_nearbyUnits; // here we check for opfor in a 300m radius 
 
 	if ((_enemyNear == false) && (_inArea)) then {
 		// play sound 
-		// _randPlayer say3D ["jungle1", 25];	
-		_randPlayer say3D [_sound, 25];	
+		// _randPlayer say3D [_sound, 25];	
+		[_randPlayer, [_sound, 50, 1]] remoteExec ["say3d"];
 	} else {
 		systemChat "no jungle sounds as enemy is near";
 	};
