@@ -55,12 +55,12 @@
 
 // trigger time for night
 waitUntil { (date select 3) == 19 };
-systemChat "it is 7pm, time for real-time dusk speed";
-setTimeMultiplier 1;
+systemChat "it is 7pm, time for near-real-time dusk speed";
+setTimeMultiplier 1.5;
 
 waitUntil { (date select 4) == 20 };
 systemChat "it is 7:30pm, time for fast night speed";
-setTimeMultiplier 55;
+setTimeMultiplier 60;
 RGG_isDay = false;
 publicVariable "RGG_isDay";
 // spawn RGGs_fnc_spawn_birdDog;
@@ -90,7 +90,7 @@ waitUntil { (date select 3) == 5 };
 systemChat "it is 5am, time for slow dawn-break";
 setTimeMultiplier 2;
 
-waitUntil { (date select 4) == 30 };
+waitUntil { (date select 4) == 25 };
 systemChat "it is 5:30am, time for slow day speed";
 setTimeMultiplier 25;
 RGG_isDay = true;

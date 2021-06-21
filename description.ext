@@ -4,7 +4,7 @@
 
 //------------------------AIS INJURY----------------------------
 class CfgFunctions {
-	#include "AIS\cfgFunctions.hpp"
+	// #include "AIS\cfgFunctions.hpp"
 	#include "functions\functions.hpp"
 	#include "functions_Ambient\functions_Ambient.hpp"
 	#include "functions_Build\functions_Build.hpp"
@@ -19,7 +19,7 @@ class CfgFunctions {
 	#include "functions_Spawn\functions_Spawn.hpp"
 	#include "functions_Vehicles\functions_Vehicles.hpp"
 };
-#include "AIS\Effects\BarDlg.hpp"
+// #include "AIS\Effects\BarDlg.hpp"
 //--------------------------------------------------------------
 
 respawn = 3;
