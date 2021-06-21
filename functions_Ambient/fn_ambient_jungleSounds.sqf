@@ -18,7 +18,29 @@ while {TRUE} do {
 	_playersOnGround = [] call RGGg_fnc_get_allPlayersOnGround;
 
 	// select random sound 
-	_sound = selectRandom ["night1", "night2", "night3", "night4", "night5", "night6", "night7", "night8", "night9", "night10", "night11", "night12", "night13", "night14", "night15", "night16", "night17", "night18", "night19", "night20", "night21"];
+	_sound = selectRandom [
+		"night1", 
+		"night2", 
+		"night3", 
+		"night4", 
+		"night5", 
+		"night6", 
+		"night7", 
+		"night8", 
+		"night9", 
+		"night10", 
+		"night11", 
+		"night12", 
+		"night13", 
+		"night14", 
+		"night15", 
+		"night16", 
+		"night17", 
+		"night18", 
+		"night19", 
+		"night20", 
+		"night21"
+	];
 
 	// select random player on ground 
 	// _randPlayer = selectRandom _playersOnGround; 

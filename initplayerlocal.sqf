@@ -1,6 +1,9 @@
 
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
+// remove shift map clicks 
+onMapSingleClick {_shift};
+
 // remove stamina 
 player enableStamina FALSE;
 player addEventHandler ['Respawn',{ player enableStamina FALSE }];
@@ -16,7 +19,7 @@ tinmanModule addCuratorEditableObjects [[player], true];
 // execVM "voiceMarkerSystem\1_vmsInit.sqf";
 
 private _playerFaction = faction player;
-systemChat format ["you are %1 faction", _playerFaction];
+// systemChat format ["you are %1 faction", _playerFaction];
 
 if (_playerFaction == "I_ARVN") then {
 	vamp = false;
