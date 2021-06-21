@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1110;
+		nextID=1123;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17119.779,50.277058,7099.7036};
-		dir[]={0.13055523,-0.52982992,0.83799511};
-		up[]={0.081560828,0.84810388,0.52351469};
-		aside[]={0.98808062,7.4505806e-009,-0.15393776};
+		pos[]={18608.945,31.644661,8352.916};
+		dir[]={-0.33044291,-0.40270859,0.85362375};
+		up[]={-0.1453829,0.91532362,0.37556532};
+		aside[]={0.93258828,-5.5754208e-007,0.36100787};
 	};
 };
 binarizationWanted=0;
@@ -325,14 +325,14 @@ class Mission
 		day=15;
 		hour=18;
 		minute=-17;
-		startFogBase=-16.448364;
-		forecastFogBase=74.770874;
-		startFogDecay=0.015592507;
-		forecastFogDecay=0.011446188;
+		startFogBase=-1000;
+		forecastFogBase=-1000;
+		startFogDecay=0;
+		forecastFogDecay=0;
 	};
 	class Entities
 	{
-		items=178;
+		items=184;
 		class Item0
 		{
 			dataType="Logic";
@@ -6674,6 +6674,198 @@ class Mission
 				};
 				nAttributes=14;
 			};
+		};
+		class Item178
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18593.08,22.751717,8367.7637};
+				angles[]={0,3.499202,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1110;
+			type="Land_PortableLight_double_F";
+			atlOffset=0.0039539337;
+		};
+		class Item179
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18607.479,22.482891,8374.0244};
+				angles[]={0,2.0633738,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1111;
+			type="Land_PortableLight_double_F";
+			atlOffset=0.0039539337;
+		};
+		class Item180
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18586.117,22.48711,8400.7354};
+				angles[]={0,2.7256522,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1112;
+			type="Land_PortableLight_double_F";
+		};
+		class Item181
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18595.262,23.733719,8366.0732};
+				angles[]={6.2511969,4.2754641,0.043971907};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1114;
+			type="vn_b_wheeled_m54_ammo";
+		};
+		class Item182
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18606.406,23.310293,8370.2842};
+				angles[]={0.0219975,1.191069,6.2551904};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1118;
+			type="vn_b_wheeled_m54_repair";
+		};
+		class Item183
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18600.049,21.868368,8365.9111};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						disableSimulation=1;
+						stance="Middle";
+					};
+					id=1122;
+					type="vn_c_men_11";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="VIE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1121;
 		};
 	};
 	class Connections

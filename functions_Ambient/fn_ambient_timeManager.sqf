@@ -54,9 +54,13 @@
 // --------------------------------------------------------
 
 // trigger time for night
+waitUntil { (date select 3) == 18 };
+systemChat "it is 7pm, time for near-real-time dusk speed";
+setTimeMultiplier 15;
+
 waitUntil { (date select 3) == 19 };
 systemChat "it is 7pm, time for near-real-time dusk speed";
-setTimeMultiplier 1.5;
+setTimeMultiplier 2;
 
 waitUntil { (date select 4) == 20 };
 systemChat "it is 7:30pm, time for fast night speed";

@@ -48,35 +48,39 @@ _dataStore = [];
 	if ((side _x) == INDEPENDENT) then { _dataStore pushback _x }
 } forEach allPlayers;
 
-_player = _dataStore select 0;
-_origin = getPos _player;
+_cnt = count _dataStore;
 
-// spawn cesna somewhere away 
-// set waypoint on player pos  
-_anchorPos = _origin getPos [900, 0];
-
-_origin set [2, 500];
-
-_birdDog = [_anchorPos, 180, "I_C_Plane_Civil_01_F", civilian] call BIS_fnc_spawnVehicle;
-_group = _birdDog select 2;
-
-[_group, _origin, 500, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
-
-// waitUntil { RGG_isDay };
-
-while { !RGG_isDay } do {
-	systemChat "birdDog check - should be going to player pos";
+if (_cnt > 0) then {
+	
+	_player = _dataStore select 0;
 	_origin = getPos _player;
+
+	// spawn cesna somewhere away 
+	// set waypoint on player pos  
+	_anchorPos = _origin getPos [900, 0];
+
 	_origin set [2, 500];
+
+	_birdDog = [_anchorPos, 180, "I_C_Plane_Civil_01_F", civilian] call BIS_fnc_spawnVehicle;
+	_group = _birdDog select 2;
+
 	[_group, _origin, 500, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
-	sleep 30;
+
+	// waitUntil { RGG_isDay };
+
+	while { !RGG_isDay } do {
+		systemChat "birdDog check - should be going to player pos";
+		_origin = getPos _player;
+		_origin set [2, 500];
+		[_group, _origin, 500, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+		sleep 30;
+	};
+
+	// send away 
+	systemChat "is day - sending birddog away";
+	[_group, [0,0], 500, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+
 };
-
-// send away 
-systemChat "is day - sending birddog away";
-[_group, [0,0], 500, "LOITER", "AWARE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
-
-
 
 
 
