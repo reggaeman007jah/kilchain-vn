@@ -55,14 +55,14 @@
 
 // trigger time for night
 waitUntil { (date select 3) == 18 };
-systemChat "it is 7pm, time for near-real-time dusk speed";
+systemChat "it is 6pm, time for near-real-time dusk speed";
 setTimeMultiplier 15;
 
 waitUntil { (date select 3) == 19 };
 systemChat "it is 7pm, time for near-real-time dusk speed";
 setTimeMultiplier 2;
 
-waitUntil { (date select 4) == 20 };
+waitUntil { (date select 4) == 15 };
 systemChat "it is 7:30pm, time for fast night speed";
 setTimeMultiplier 60;
 RGG_isDay = false;
@@ -96,7 +96,7 @@ setTimeMultiplier 2;
 
 waitUntil { (date select 4) == 25 };
 systemChat "it is 5:30am, time for slow day speed";
-setTimeMultiplier 25;
+setTimeMultiplier 23;
 RGG_isDay = true;
 publicVariable "RGG_isDay";
 

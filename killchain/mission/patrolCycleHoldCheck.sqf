@@ -34,7 +34,7 @@ while {_checkCycle} do {
 
 	_activateCheck = _lzPos distance _playerPos;
 
-	if ((_activateCheck) < 100) then {
+	if ((_activateCheck) < 200) then {
 		hint "lets go";
 		"Indifor Commander is now at LZ Zeus - Patrol is live" remoteExec ["systemChat", 0, true];	
 		// sleep 1;

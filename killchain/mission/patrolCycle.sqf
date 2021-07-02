@@ -110,7 +110,7 @@ _lineTest setMarkerSize [2, _dist2];
 // systemChat "debug - markers done"; 
 
 // new camp location and items 
-_randomCampLocation = _objPos findEmptyPosition [1,100,"B_Quadbike_01_F"];
+_randomCampLocation = _objPos findEmptyPosition [1,500,"B_Quadbike_01_F"];
 _RGG_CampItems = [];
 _random5 = random 5;
 _random3 = random 3;

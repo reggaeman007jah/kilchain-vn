@@ -1,5 +1,5 @@
 
-setTimeMultiplier 25;
+setTimeMultiplier 23;
 remoteExec ["RGGa_fnc_ambient_timeManager", 2];  // execute only on server 
 
 KILLCHAINISLIVE = false;
@@ -231,7 +231,7 @@ sleep 1;
 [[17093,7137.33,0]] execVM "killchain\systems\spawnerSystems\createAmmoBox.sqf";
 
 // testing sound sources
-[soundSource] spawn RGGa_fnc_ambient_jungleSounds;
+// [soundSource] spawn RGGa_fnc_ambient_jungleSounds;
 
 
 // [17113.8,7161.41,0]

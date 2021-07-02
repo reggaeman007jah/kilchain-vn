@@ -57,7 +57,7 @@ if ((flybyIsActive) && (RGG_isDay)) then {
 		sleep _slp; // spacer sleep between each iteration to prevent spawn overlaps 	
 	};
 	
-	sleep 200; // always this 
+	sleep 500; // always this 
 	sleep _sleep; // random sleep between spawn batches // test if moving this line solves the pos problem 
 	flybyIsActive = true;
 };

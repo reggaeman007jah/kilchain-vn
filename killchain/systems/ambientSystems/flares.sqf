@@ -67,6 +67,10 @@ if (_cnt == 1) then {
 	
 } else {
 	systemChat "No Tinman, No Flares";
+	// choose random other player 
+	// get players on ground  
+	// _playersOnGround = [] call RGGg_fnc_get_allPlayersOnGround;
+	// _chosen = selectRandom _playersOnGround;
 };
 
 

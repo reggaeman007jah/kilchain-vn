@@ -119,6 +119,7 @@ if (patrolPointsTaken >= 0 ) then {
 	};
 
 	tinmanModule addCuratorEditableObjects [_opforTeam, true];
+	bluforZeus addCuratorEditableObjects [_opforTeam, true];
 
 	// idea - after spawn, have them roam around the objective area .. 
 	_roam = true;

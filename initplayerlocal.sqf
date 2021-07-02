@@ -2,7 +2,7 @@
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 
 // remove shift map clicks 
-onMapSingleClick {_shift};
+// onMapSingleClick {_shift};
 
 // remove stamina 
 player enableStamina FALSE;
